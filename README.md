@@ -2,7 +2,24 @@
 
 Give your next AI session enough context to resume a technical project. Keep one current Markdown note per project, check off verified work, and keep a dated record of decisions that future contributors might revisit.
 
-## Set up your copy
+## Give this to your AI
+
+Copy this prompt into an agent that can read the repository and edit your chosen workspace:
+
+```text
+Set up a project memory bank for me using https://github.com/HyperlordxD/ai-project-memory-bank. Follow the “Agent setup procedure” in its README. Make the files, configure startup, and tell me how to test a fresh session.
+```
+
+### Agent setup procedure
+
+1. Identify the technical project and the user's preferred location. Default to `docs/memory/` in the current project. If they want Obsidian, ask for the vault folder if unknown. If they want the bank shared across projects, use one bank and a distinct note per project. Confirm any desired model restriction or callsign. Default to this technical project with no callsign.
+2. Copy the workflow, templates, reference, and next-actions note into the destination, preserving relative paths. Create `projects/` and `logs/`. If the bank already exists, reuse it and preserve existing notes. Work in the user's copy of the template.
+3. Create `projects/<project-slug>.md` from the project template. Fill in the goal, source location, verified state, and one actionable checkbox tagged `#project-next`. Inspect available project evidence. Ask for missing goals and label unverified claims explicitly.
+4. Add a short startup rule to the agent's supported persistent project instructions (for example, an existing `AGENTS.md` when supported). Preserve existing instructions. For an explicitly requested cross-project setup, use supported user-level instructions and scope the rule to the selected projects and model. On startup, read the bank workflow and the matching current note. For a new project, create its note from the template. Use the chosen callsign only after reading the bank. Keep machine-specific vault paths in local settings. If persistent instructions are unavailable, give the user the filled-in startup rule to paste in each fresh chat.
+5. Follow WORKFLOW.md for verification and handoffs. Load the full UX reference for interface work. In Obsidian, the optional Tasks plugin renders next-actions.md. Keep actionable checkboxes in the project notes so plain Markdown also works.
+6. Verify the startup rule points to the real workflow and project note, and that the note contains the intended next action. Report the files created or reused. Give the user the exact phrase “Resume <project name>” with the name filled in. Record fresh-session recovery as verified only after a separate session succeeds or the user confirms it.
+
+## Set up your copy manually
 
 1. **GitHub:** Fork or download this repository, or copy its files into a folder such as `docs/memory/` in your project. Give your agent access to that working copy. **Obsidian:** Open the downloaded folder as a vault, or copy it into an existing vault. Either setup works with a Markdown editor alone.
 2. Copy [the project template](templates/project.md) to `projects/<project-slug>.md`. Create the directory if needed. Replace the prompts with your goal, the source location, and one concrete next action. See the [worked example](examples/csv-export.md).
