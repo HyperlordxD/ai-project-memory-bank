@@ -31,7 +31,7 @@ To restrict the workflow to a particular model, include its name in the scope. T
 
 ## Test the handoff
 
-Start a fresh session and ask it to resume your project. Can it name the goal, cite the last verified result, and identify the next action from the files? After completing that action, check that the original checkbox is marked done.
+Start a fresh session and ask it to resume your project. Can it name the goal, cite the last verified result, and identify the next action from the files? After completing that action, check that the original checkbox is marked done. *Tip: Use a callsign to check if the agent is receiving the information at the start of the project*
 
 ## What's inside
 
