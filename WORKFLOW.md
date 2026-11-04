@@ -3,6 +3,10 @@
 ## Start or resume
 For a new project, copy the project template into `projects/` and name it for the project. Record the goal, success criteria, source location, current evidence, and next action. On resume, read that note first. Follow links to logs only to clarify or verify a detail. Recheck claims against the relevant file, test, or commit if the work may have changed.
 
+## Using MCP
+
+Use an available Model Context Protocol (MCP) tool when the task requires data or actions from a connected service. For example, use the GitHub MCP to check the current state of a pull request when that state matters to the task.
+
 ## Finish a task
 Once you verify the result or the user confirms success, change the original checkbox to `[x]` before reporting back. For routine work, record the evidence once in the current note. Add a separate tagged checkbox for a follow-up only if there is one. Use ordinary bullets for standing guidance.
 
